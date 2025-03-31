@@ -17,7 +17,7 @@ def sign_message(challenge, filename="secret_key.txt"):
 
     print(f"Private Key: {private_key}")
     print(f"Address: {address}")
-    
+
     # This code will read your "sk.txt" file
     # If the file is empty, it will raise an exception
     with open(filename, "r") as f:
