@@ -10,14 +10,6 @@ def sign_message(challenge, filename="secret_key.txt"):
     To pass the tests, your signature must verify, and the account you use
     must have testnet funds on both the bsc and avalanche test networks.
     """
-    account = eth_account.Account.create()
-
-    private_key = account.key.hex()
-    address = account.address
-
-    print(f"Private Key: {private_key}")
-    print(f"Address: {address}")
-
     # This code will read your "sk.txt" file
     # If the file is empty, it will raise an exception
     with open(filename, "r") as f:
