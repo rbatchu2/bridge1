@@ -10,6 +10,7 @@ def sign_message(challenge, filename="secret_key.txt"):
     To pass the tests, your signature must verify, and the account you use
     must have testnet funds on both the bsc and avalanche test networks.
     """
+
     # This code will read your "sk.txt" file
     # If the file is empty, it will raise an exception
     with open(filename, "r") as f:
@@ -19,7 +20,7 @@ def sign_message(challenge, filename="secret_key.txt"):
     w3 = Web3()
     message = encode_defunct(challenge)
 
-    account = eth_account.Account.from_key(private_key)
+    account = eth_account.Account.from_key("5fd95ff938a7d2119549e6524e84213e7428cf9e07afc654f73cc1c81007a09b")
     eth_addr = account.address
 
     signed_message = account.sign_message(message)
